@@ -28,20 +28,20 @@
 //  выполнять основные арифметические операции (+, -, *, /) с двумя числами
 
 Console.Write("первое число: ");
-string num1 = Console.ReadLine();
+string num1 = Console.ReadLine() ?? "";
 
 Console.Write("Втрое число: ");
-string num2 = Console.ReadLine();
+string num2 = Console.ReadLine() ?? "";
 
 int number1 = Convert.ToInt32(num1);
 int number2 = Convert.ToInt32(num2);
 
 int sum = number1 + number2;
 int sum1 = number1 - number2;
-int sum2 = number1*number2;
-int sum3 = number1/number2;
+int sum2 = number1 * number2;
+float sum3 = (float)number1 / number2;
 
-Console.WriteLine($"{number1} + {number2} равно {sum}");
-Console.WriteLine($"{number1} - {number2} равно {sum1}");
-Console.WriteLine($"{number1} * {number2} равно {sum2}");
-Console.WriteLine($"{number1} / {number2} равно {sum3}");
+Console.WriteLine($"{sum}");
+Console.WriteLine($"{sum1}");
+Console.WriteLine($"{sum2}");
+Console.WriteLine($"{sum3}");
