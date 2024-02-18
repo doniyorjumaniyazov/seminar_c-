@@ -27,21 +27,35 @@
 // Калькулятор: Создайте простой калькулятор, который может
 //  выполнять основные арифметические операции (+, -, *, /) с двумя числами
 
-Console.Write("первое число: ");
-string num1 = Console.ReadLine() ?? "";
+Console.Title = "Wcalculate";
+Console.BackgroundColor = ConsoleColor.White;
+Console.ForegroundColor = ConsoleColor.Blue;
+Console.Clear();
+Console.Title = "Wcalculate";
+Console.BackgroundColor = ConsoleColor.White;
+Console.ForegroundColor = ConsoleColor.Red;
+Console.Clear();
+string input;
+do
+{
+    Console.Write("первое число: ");
+    string num1 = Console.ReadLine() ?? "";
 
-Console.Write("Втрое число: ");
-string num2 = Console.ReadLine() ?? "";
+    Console.Write("Втрое число: ");
+    string num2 = Console.ReadLine() ?? "";
 
-int number1 = Convert.ToInt32(num1);
-int number2 = Convert.ToInt32(num2);
+    double number1 = Convert.ToDouble(num1);
+    double number2 = Convert.ToDouble(num2);
 
-int sum = number1 + number2;
-int sum1 = number1 - number2;
-int sum2 = number1 * number2;
-float sum3 = (float)number1 / number2;
+    double sum = number1 + number2;
+    double sum1 = number1 - number2;
+    double sum2 = number1 * number2;
+    double sum3 = number1 / number2;
 
-Console.WriteLine($"{sum}");
-Console.WriteLine($"{sum1}");
-Console.WriteLine($"{sum2}");
-Console.WriteLine($"{sum3}");
+    Console.WriteLine($"Cложение = {sum}");
+    Console.WriteLine($"Вычитаные = {sum1}");
+    Console.WriteLine($"Умножение = {sum2}");
+    Console.WriteLine($"Деление = {sum3}");
+    Console.WriteLine("");
+    input = Console.ReadLine();
+} while (input != "exit");
