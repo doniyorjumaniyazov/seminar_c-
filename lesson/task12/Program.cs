@@ -2,10 +2,11 @@
 // цифру этого числа.
 
 Console.Write("вводите трехзначние число: ");
-int number = int.Parse(Console.ReadLine());
+string number = (Console.ReadLine())! ;
 
 int number1 = Convert.ToInt32(number);
 
-int num = number1/10;
+        int num = number1 / 10;
 
-Console.WriteLine($"резултать {num}");
+        Console.WriteLine($"резултать: {num}");
+        
