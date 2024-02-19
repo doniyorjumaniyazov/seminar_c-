@@ -35,36 +35,58 @@
         // Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0
          // и выдаёт номер координатной четверти плоскости,в которой находится эта точка.
 
-         Console.Write("Вводите x: ");
-         double x = Convert.ToDouble(Console.ReadLine());
+         // Console.Write("Вводите x: ");
+         // double x = Convert.ToDouble(Console.ReadLine());
 
-         Console.Write("Вводите y: ");
-         double y = Convert.ToDouble(Console.ReadLine());
+         // Console.Write("Вводите y: ");
+         // double y = Convert.ToDouble(Console.ReadLine());
 
-         if (x == 0 && y == 0)
+         // if (x == 0 && y == 0)
+         // {
+            // Console.WriteLine("Точка находится в начале координат.");
+         // }
+
+         // else 
+         // { 
+            // if (x > 0 && y > 0)
+            // {
+            // Console.WriteLine("1 четверть");
+            // }
+
+            // if (x < 0 && y > 0)
+            // {
+               // Console.WriteLine("2 четверть");
+            // }
+            // if (x < 0 && y < 0)
+            // {
+               //  Console.WriteLine("3 четверть");
+            // }
+            // if (x > 0 && y < 0)
+            // {
+               //  Console.WriteLine("4 четверть");
+            //}
+
+         // }
+         // Напишите программу, которая принимает на вход целое число из отрезка [10, 99] и показывает
+         // наибольшую цифру числа.
+
+         Console.Write("число: ");
+         int number = Convert.ToInt32(Console.ReadLine());
+         
+         if (number >= 10 && number <= 99 )
          {
-            Console.WriteLine("Точка находится в начале координат.");
-         }
-
-         else 
-         { 
-            if (x > 0 && y > 0)
+          int first = number / 10;
+          int second = number % 10;
+         
+          if (first > second)
             {
-            Console.WriteLine("1 четверть");
-            }
-
-            if (x < 0 && y > 0)
-            {
-                Console.WriteLine("2 четверть");
-            }
-            if (x < 0 && y < 0)
-            {
-                Console.WriteLine("3 четверть");
-            }
-            if (x > 0 && y < 0)
-            {
-                Console.WriteLine("4 четверть");
-            }
+            Console.WriteLine($"Первая цифра больше: {first}");
+          }
 
 
+        else
+
+         {
+          Console.WriteLine($"Вторая цифра больше: {second}");
+        }
          }
