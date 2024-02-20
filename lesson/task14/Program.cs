@@ -70,23 +70,36 @@
          // Напишите программу, которая принимает на вход целое число из отрезка [10, 99] и показывает
          // наибольшую цифру числа.
 
-         Console.Write("число: ");
-         int number = Convert.ToInt32(Console.ReadLine());
+         // Console.Write("число: ");
+         // int number = Convert.ToInt32(Console.ReadLine());
          
-         if (number >= 10 && number <= 99 )
+         // if (number >= 10 && number <= 99 )
+         //{
+          //int first = number / 10;
+          // int second = number % 10;
+         
+          // if (first > second)
+            // {
+            // Console.WriteLine($"Первая цифра больше: {first}");
+          // }
+
+
+        // else
+
+         // {
+          // Console.WriteLine($"Вторая цифра больше: {second}");
+        // }
+         // }
+
+
+          Console.Write("Введите число: ");
+          int number = Convert.ToInt32(Console.ReadLine());
+         
+          if (number >= 10 && number <= 99 )
          {
-          int first = number / 10;
+         int first = number / 10;
           int second = number % 10;
          
-          if (first > second)
-            {
-            Console.WriteLine($"Первая цифра больше: {first}");
-          }
-
-
-        else
-
-         {
-          Console.WriteLine($"Вторая цифра больше: {second}");
-        }
+         int maxDigit = Math.Max(first, second);
+          Console.WriteLine($"Наибольшая цифра число: {number} --- {maxDigit}");
          }
