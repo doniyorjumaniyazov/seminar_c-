@@ -64,13 +64,7 @@ Console.WriteLine(anotherString);
         
        Console.WriteLine("Начальной строка: ");
        string str1 = Console.ReadLine()!;
-
-       string reversedString = ReverseWords(str1);
-
-        Console.WriteLine($"Результат: {reversedString}");
-
-
-
+      
        string ReverseWords(string str1)
        {
         
@@ -81,7 +75,8 @@ Console.WriteLine(anotherString);
         return string.Join(" ", words);
     }
        
-
+         string reversedString = ReverseWords(str1);
+         Console.WriteLine($"Результат: {reversedString}");
             
 
      
